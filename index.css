@@ -1,0 +1,17 @@
+ascii {
+  font-family: "Courier New", monospace;
+}
+
+left {
+  font-family: "Courier New", monospace;
+  float: left;
+  margin: 0 1.5%;
+  width: 10%;
+}
+
+right {
+  font-family: "Courier New", monospace;
+  float: right;
+  margin: 0 1.5%;
+  width: 10%;
+}
