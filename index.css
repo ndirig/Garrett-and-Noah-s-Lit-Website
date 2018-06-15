@@ -1,17 +1,37 @@
+pre {
+  font-family: "Courier New", monospace;
+}
+
+top-link {
+  display: block;
+  font-family: "Courier New", monospace;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  padding-left: 6%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-container > content {
+  font-family: "Courier New", monospace;
+  width: 275px;
+  height: 325px;
+  text-align: center;
+}
+
 ascii {
-  font-family: "Courier New", monospace;
+  text-align: left;
+  font-weight: bold;
 }
 
-left {
+bottom-link {
+  display: block;
   font-family: "Courier New", monospace;
-  float: left;
-  margin: 0 1.5%;
-  width: 10%;
-}
-
-right {
-  font-family: "Courier New", monospace;
-  float: right;
-  margin: 0 1.5%;
-  width: 10%;
+  text-align: center;
+  padding-right: 14%;
 }
