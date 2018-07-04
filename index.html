@@ -1,75 +1,77 @@
 <!DOCTYPE html>
-<html>
+
+<!-- Get Angular module -->
+<html data-ng-app="mainApp">
+  
+  <!-- Import AngularJS and Route module -->
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-route.min.js"></script>
+    
 <head>
   <link rel="stylesheet" href="index.css">
 </head>
 
-  <top-link>bio</top-link>
+<body>
   
-  <!-- Page is split into three columns here, one for the photos link,
-  one for the ascii art, and one for the lyrics link. -->
-  <!-- Flex container ensures that the columns and art don't get all
-  screwed up by different screen sizes and browser resizing. -->
-  <div class="flex-container">
-  
-    <content>
-      <!-- Contents between pre tags are displayed exactly as is,
-      aka: leave the empty lines -->
-      <pre>
-      
-      
-      
-     
-     
-photos
-      </pre>
-    </content>
-    
-    <content>
-      <ascii><pre>
- S        
-
- E         M
- 
-
- V
-           E
-
-             T   
-
- E                      /SUN
-   
-
- N           E
-  
-             R
-      </pre></ascii>
-    </content>
-    
-    <content>
-      <pre>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-lyrics
-      </pre>
-    </content>
-
+  <!-- Placeholder for views -->
+  <div>
+    <div data-ng-view></div>
   </div>
   
-  <bottom-link>
-    <pre>
-contact 
-  us
-    </pre>
-  </bottom-link>
+  <script>
   
+    // Create Angular module
+    var mainApp = angular.module('mainApp', ['ngRoute']);
+    
+    
+    // Set up views and assign them controllers
+    
+    mainApp.config(function($routeProvider) {
+      $routeProvider
+        .when('/vwHome', {
+          controller: 'homeController',
+          templateUrl: 'views/vwHome.html'
+        })
+        .when('vwBio.html', {
+          controller: 'bioController',
+          templateUrl: 'views/vwBio.html'
+        })
+        .when('vwContact.html', {
+          controller: 'contactController',
+          templateUrl: 'views/vwContact.html'
+        })
+        .when('vwLyrics.html', {
+          controller: 'lyricsController',
+          templateUrl: 'views/vwLyrics.html'
+        })
+        .when('vwPhotos.html', {
+          controller: 'photosController',
+          templateUrl: 'views/vwPhotos.html'
+        })
+        .otherwise({ redirectTo: 'views/vwHome.html' });
+    });
+    
+    
+    // Create and implement controllers for mainApp
+    
+    mainApp.controller('homeController', function($scope) {
+      // asdf
+    });
+    mainApp.controller('bioController', function($scope) {
+      // asdf
+    });
+    mainApp.controller('contactController', function($scope) {
+      // asdf
+    });
+    mainApp.controller('lyricsController', function($scope) {
+      // asdf
+    });
+    mainApp.controller('photosController', function($scope) {
+      // asdf
+    });
+    
+  </script>
+  
+    
+</body>
 </html>
