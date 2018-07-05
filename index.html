@@ -2,10 +2,6 @@
 
 <!-- Get Angular module -->
 <html data-ng-app="mainApp">
-  
-  <!-- Import AngularJS and Route module -->
-  <script src="scripts/angular.min.js"></script>
-  <script src="scripts/angular-route.min.js"></script>
     
 <head>
   <link rel="stylesheet" href="index.css">
@@ -18,6 +14,10 @@
     <div data-ng-view></div>
   </div>
   
+    <!-- Import AngularJS and Route module -->
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-route.min.js"></script>
+  
   <script>
   
     // Create Angular module
@@ -27,47 +27,41 @@
     // Set up views and assign them controllers
     
     mainApp.config(function($routeProvider) {
-      $routeProvider
-        .when('/vwHome', {
+      $routeProvider.when('vwHome.html', {
           controller: 'homeController',
-          templateUrl: 'views/vwHome.html'
-        })
-        .when('vwBio.html', {
+          templateUrl: '/views/vwHome.html'
+        }).when('vwBio.html', {
           controller: 'bioController',
-          templateUrl: 'views/vwBio.html'
-        })
-        .when('vwContact.html', {
+          templateUrl: '/views/vwBio.html'
+        }).when('vwContact.html', {
           controller: 'contactController',
-          templateUrl: 'views/vwContact.html'
-        })
-        .when('vwLyrics.html', {
+          templateUrl: '/views/vwContact.html'
+        }).when('vwLyrics.html', {
           controller: 'lyricsController',
-          templateUrl: 'views/vwLyrics.html'
-        })
-        .when('vwPhotos.html', {
+          templateUrl: '/views/vwLyrics.html'
+        }).when('vwPhotos.html', {
           controller: 'photosController',
-          templateUrl: 'views/vwPhotos.html'
-        })
-        .otherwise({ redirectTo: 'views/vwHome.html' });
+          templateUrl: '/views/vwPhotos.html'
+        }).otherwise({ redirectTo: '/views/vwBio.html' });
     });
     
     
     // Create and implement controllers for mainApp
     
     mainApp.controller('homeController', function($scope) {
-      // asdf
+      $scope.bubba = 3;
     });
     mainApp.controller('bioController', function($scope) {
-      // asdf
+      $scope.bubba = 3;
     });
     mainApp.controller('contactController', function($scope) {
-      // asdf
+      $scope.bubba = 3;
     });
     mainApp.controller('lyricsController', function($scope) {
-      // asdf
+      $scope.bubba = 3;
     });
     mainApp.controller('photosController', function($scope) {
-      // asdf
+      $scope.bubba = 3;
     });
     
   </script>
