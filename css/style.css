@@ -2,14 +2,24 @@ pre {
   font-family: "Courier New", monospace;
 }
 
-top-link {
-  display: block;
-  font-family: "Courier New", monospace;
-  text-align: center;
-  padding-top: 5%;
-  padding-bottom: 1%;
-  padding-left: 6%;
+a { 
+  font-family: "Courier New", monospace;  
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  
+  /*
+  TRYING TO EXTEND ANCHOR TAG SO I CAN PUT PADDING ON IT
+  top {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    padding-left: 6%;
+    display: block;
+ 
+  } */
 }
+
 
 .flex-container {
   display: flex;

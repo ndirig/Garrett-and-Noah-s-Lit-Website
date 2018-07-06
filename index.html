@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 
 <!-- Get Angular module -->
-<html data-ng-app="mainApp">
+<html>
     
 <head>
-  <link rel="stylesheet" href="index.css">
+  <!-- Import AngularJS and Route module  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <!-- Import Custom Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-ng-app="mainApp">
   
   <!-- Placeholder for views -->
-  <div>
-    <div data-ng-view></div>
-  </div>
-  
-    <!-- Import AngularJS and Route module -->
-  <script src="scripts/angular.min.js"></script>
-  <script src="scripts/angular-route.min.js"></script>
+  <div ng-view></div>
   
   <script>
   
@@ -27,27 +25,31 @@
     // Set up views and assign them controllers
     
     mainApp.config(function($routeProvider) {
-      $routeProvider.when('vwHome.html', {
-          controller: 'homeController',
-          templateUrl: '/views/vwHome.html'
-        }).when('vwBio.html', {
-          controller: 'bioController',
-          templateUrl: '/views/vwBio.html'
-        }).when('vwContact.html', {
-          controller: 'contactController',
-          templateUrl: '/views/vwContact.html'
-        }).when('vwLyrics.html', {
-          controller: 'lyricsController',
-          templateUrl: '/views/vwLyrics.html'
-        }).when('vwPhotos.html', {
-          controller: 'photosController',
-          templateUrl: '/views/vwPhotos.html'
-        }).otherwise({ redirectTo: '/views/vwBio.html' });
+      $routeProvider
+        .when('/', {
+          //controller: 'homeController',
+          templateUrl: 'views/vwHome.html'
+        })
+        .when('/Bio', {
+          //controller: 'bioController',
+          templateUrl: 'views/vwBio.html'
+        })
+        .when('/Contact', {
+          //controller: 'contactController',
+          templateUrl: 'views/vwContact.html'
+        })
+        .when('/Lyrics', {
+          //controller: 'lyricsController',
+          templateUrl: 'views/vwLyrics.html'
+        })
+        .when('/Photos', {
+          //controller: 'photosController',
+          templateUrl: 'views/vwPhotos.html'
+        }).otherwise({ redirectTo: 'views/vwHome.html' });
     });
     
-    
     // Create and implement controllers for mainApp
-    
+    /*
     mainApp.controller('homeController', function($scope) {
       $scope.bubba = 3;
     });
@@ -63,6 +65,7 @@
     mainApp.controller('photosController', function($scope) {
       $scope.bubba = 3;
     });
+    */
     
   </script>
   
