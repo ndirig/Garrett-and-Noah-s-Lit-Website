@@ -3,21 +3,11 @@ pre {
 }
 
 a { 
-  font-family: "Courier New", monospace;  
+  font-family: "Courier New", monospace; 
   color: black;
   text-decoration: none;
   cursor: pointer;
-  
-  /*
-  TRYING TO EXTEND ANCHOR TAG SO I CAN PUT PADDING ON IT
-  top {
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 1%;
-    padding-left: 6%;
-    display: block;
- 
-  } */
+  position: fixed;
 }
 
 
@@ -31,12 +21,15 @@ a {
   font-family: "Courier New", monospace;
   width: 275px;
   height: 325px;
-  text-align: center;
 }
 
 ascii {
   text-align: left;
+  display: block;
   font-weight: bold;
+  position: fixed;
+  top: 22%; 
+  left: 37%;
 }
 
 bottom-link {

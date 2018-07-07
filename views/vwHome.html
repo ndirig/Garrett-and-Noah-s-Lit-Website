@@ -1,30 +1,14 @@
 <div class="container">
 
-<br><br><br><br>
-<a ng-href='#!Bio' style='padding-left: 53%;'>bio</a>
-<br><br>
+  <a ng-href='#!Bio' style='top: 10%; left: 53%;'>bio</a>
   
-  <!-- Page is split into three columns here, one for the photos link,
-  one for the ascii art, and one for the lyrics link. -->
-  <!-- Flex container ensures that the columns and art don't get all
-  screwed up by different screen sizes and browser resizing. -->
-  <div class="flex-container">
-  
-    <content>
-      <!-- Contents between pre tags are displayed exactly as is,
-      aka: leave the empty lines -->
-      <pre>
-      
-      
-      
-     
-     
-photos
-      </pre>
-    </content>
+  <a ng-href='#!Photos' style='top: 28%; left: 16%;'>     
+    photos
+  </a>
     
-    <content>
-      <ascii><pre>
+  <!-- Contents between pre tags are displayed exactly as is,
+    aka: leave the empty lines -->
+  <ascii><pre>
  S        
 
  E         M
@@ -41,33 +25,15 @@ photos
  N           E
   
              R
-      </pre></ascii>
-    </content>
+  </pre></ascii>
     
-    <content>
-      <pre>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-lyrics
-      </pre>
-    </content>
-
-  </div>
+  <a ng-href='#!Lyrics' style='top: 45%; left: 77%;'>     
+    lyrics
+  </a>
   
-  <bottom-link>
-    <pre>
+  <pre>
+  <a ng-href='#!Contact' style='top: 77%; left: 30%;'>
 contact 
-  us
-    </pre>
-  </bottom-link>
+  us</a></pre>
   
 </div>  
