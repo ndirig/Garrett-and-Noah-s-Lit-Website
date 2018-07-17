@@ -43,9 +43,9 @@ ascii {
   left: 37%;
 }
 
-bottom-link {
+courier {
   display: block;
   font-family: "Courier New", monospace;
-  text-align: center;
-  padding-right: 14%;
+  color: black;
+  position: fixed;
 }
